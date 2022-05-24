@@ -18,7 +18,7 @@ function validateName(){
         nameError.innerHTML='Write full name';
         return false;
     }
-    nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    nameError.innerHTML = '';
     return true;
 }
 
@@ -33,13 +33,18 @@ function validateEmail(){
         emailError.innerHTML = 'Email invalid'
         return false;
     }
-    emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    if(email=="midlaj9995@gmail.com")
+    {
+        emailError.innerHTML='Email invalid'
+        return false;
+    }
+    emailError.innerHTML = '';
     return true;
 }
 function validateMobile(){
     var mobile = document.getElementById('contact-mobile').value;
 
-    if(mobile.length==0){
+    if((mobile.length==0)||(mobile=="9995709722")){
         mobileError.innerHTML='Mobile number is required'
         return false;
     }
@@ -47,7 +52,7 @@ function validateMobile(){
         mobileError.innerHTML = 'Mobile number invalid'
         return false;
     }
-    mobileError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    mobileError.innerHTML = '';
     return true;
 }
 function validateMessage(){
@@ -60,12 +65,12 @@ function validateMessage(){
         return false;
     }
 
-    messageError.innerHTML= '<i class="fa-solid fa-circle-check"></i>';
+    messageError.innerHTML= '';
     return true;
 }
 
 function validateForm(){
-    if(!validateName() || !validateEmail() || !validateMessage()){
+    if(!validateName() & !validateEmail() & !validateMessage()){
 
         // submitError.style.display='block';
         submitError.innerHTML='Please fill  and submit';

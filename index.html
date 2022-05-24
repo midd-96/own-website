@@ -714,23 +714,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<div class="col-12 mt-3">
 							<input class="form-control" type="text" name="Name" placeholder="Your Name"
-								id="contact-name" onkeyup="validateName()">
+								id="contact-name" onkeyup="validateName()" required>
 							<span id="name-error"></span>
 						</div>
 						<div class="col-12 mt-3">
 							<input class="form-control" type="text" name="Email" placeholder="Email Address"
-								id="contact-email" onkeyup="validateEmail()">
+								id="contact-email" onkeyup="validateEmail()" required>
 							<span id="email-error"> </span>
 						</div>
 						<div class="col-12 mt-3">
 							<input class="form-control" type="text" name="Mobile" placeholder="Mobile Number"
-								id="contact-mobile" onkeyup="validateMobile()">
+								id="contact-mobile" onkeyup="validateMobile()" required>
 							<span id="mobile-error"> </span>
 						</div>
 						<!-- <input type="text" name="contact-mobile"placeholder="Enter mobile number" id="contact-mobile" onclick="validateMobile()"> -->
 						<div class="col-12 mt-3 ">
 							<textarea class="form-control" name="Message" rows="6" placeholder="Enter message here..."
-								id="contact-message" onkeyup="validateMessage()"></textarea>
+								id="contact-message" onkeyup="validateMessage()" required='required'></textarea>
 							<span id="message-error"> </span>
 						</div>
 						<button type="submit" class="btn btn-theme mt-3 ml-1" onclick="return validateForm()"
